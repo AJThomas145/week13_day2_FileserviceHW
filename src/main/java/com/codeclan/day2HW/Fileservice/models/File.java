@@ -12,11 +12,12 @@ public class File {
     private Long id;
     @Column(name="name")
     private String name;
-    @Column(name="extension_type")
+    @Column(name="extension")
     private String extension;
-    @Column(name="size_mb")
+    @Column(name="size")
     private int size;
-    @Column(name="folder")
+    @ManyToOne
+    @JoinColumn(name="folder_id", nullable = false)
     private Folder folder;
 
     public File(String name, String extension, int size, Folder folder) {

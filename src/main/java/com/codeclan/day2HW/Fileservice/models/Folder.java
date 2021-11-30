@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name="folders")
+@Table(name = "folders")
 public class Folder {
 
     @Id
@@ -20,13 +20,13 @@ public class Folder {
     @OneToMany(mappedBy = "folder")
     private List<File> files;
     @ManyToOne
-    @JoinColumn(name="user_id", nullable = false)
+    @JoinColumn(name="user_id", nullable=false)
     private User user;
 
     public Folder(String title, User user) {
         this.title = title;
-        this.files = new ArrayList<>();
         this.user = user;
+        this.files = new ArrayList<>();
     }
 
     public Folder(){

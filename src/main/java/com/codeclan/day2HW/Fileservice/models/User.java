@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name="users")
+@Table(name = "users")
 public class User {
 
     @Id
@@ -54,6 +54,6 @@ public class User {
     }
 
     public void addFolder(Folder folder){
-        this.folders.add(folder);
-    }
+        this.folders.add(folder)
+;    }
 }
